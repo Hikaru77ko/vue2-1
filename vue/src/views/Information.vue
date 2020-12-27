@@ -18,22 +18,22 @@
         <div>
           <div class="select mr-1" style="vertical-align: baseline;">
             <select type ="number" v-model="$store.state.birthday.year">
-              <option v-for="year in years" :value="year" :key="year">
+              <option v-for="year in years" :key="year">
                 {{ year }}
               </option>
             </select>
           </div>年
           <div class="select ml-3 mr-1">
             <select type ="number" v-model="$store.state.birthday.month">
-              <option v-for="n in 12" :value="n" :key="n" >
-                {{ n }}
+              <option v-for="month in months" :key="month">
+                {{ month }}
               </option>
             </select>
           </div>月
           <div class="select ml-3 mr-1">
             <select type ="number" v-model="$store.state.birthday.day">
-              <option v-for="n in 31" :value="n" :key="n" >
-                {{ n }}
+              <option v-for="date in dates" :key="date">
+                {{ date }}
               </option>
             </select>
           </div>日
@@ -50,49 +50,19 @@
 </template>
 
 <script>
+import definition from '@/static/definition.js'
 export default {
   data() {
     return {
-      years: ["1968 (昭和43)",
-              "1969 (昭和44)",
-              "1970 (昭和45)",
-              "1971 (昭和46)",
-              "1972 (昭和47)",
-              "1973 (昭和48)",
-              "1974 (昭和49)",
-              "1975 (昭和50)",
-              "1976 (昭和51)",
-              "1977 (昭和52)",
-              "1978 (昭和53)",
-              "1979 (昭和54)",
-              "1980 (昭和55)",
-              "1981 (昭和56)",
-              "1982 (昭和57)",
-              "1983 (昭和58)",
-              "1984 (昭和59)",
-              "1985 (昭和60)",
-              "1986 (昭和61)",
-              "1987 (昭和62)",
-              "1988 (昭和63)",
-              "1989 (平成1)",
-              "1990 (平成2)",
-              "1991 (平成3)",
-              "1992 (平成4)",
-              "1993 (平成5)",
-              "1994 (平成6)",
-              "1995 (平成7)",
-              "1996 (平成8)",
-              "1997 (平成9)",
-              "1998 (平成10)",
-              "1999 (平成11)",
-              "2000 (平成12)",
-             ],
+      years: definition.years,
+      months: definition.months,
+      dates: definition.dates,
     }
   },
   methods: {
     nextQuestionnaire() {
       this.$router.push("/Questionnaire");
-    }
+    },
   }
 }
 </script>

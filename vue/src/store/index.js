@@ -7,7 +7,7 @@ export default new Vuex.Store({
   state: {
     gender: "",
     birthday:{
-      year: "1968 (昭和43)",
+      year: "1967年　（昭和41年）",
       month: "1",
       day: "1"
       },
