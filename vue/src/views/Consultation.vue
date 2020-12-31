@@ -14,7 +14,7 @@
 <!-- ボタンアイコン -->
     <div class="is-flex is-justify-content-center">
       <button class="button is-primary mr-4" @click="backQuestionnaire">前へ戻る<span class="icon pl-5 pr-3"><i class="fa fa-chevron-right fa-xs"></i></span></button>
-      <button class="button is-primary ml-4">次へ進む<span class="icon pl-5 pr-3"><i class="fa fa-chevron-right fa-xs"></i></span></button>
+      <button class="button is-primary ml-4" @click="nextConfirmation">次へ進む<span class="icon pl-5 pr-3"><i class="fa fa-chevron-right fa-xs"></i></span></button>
     </div>
   </div>
 </template>
@@ -24,6 +24,9 @@ export default {
   methods: {
     backQuestionnaire() {
       this.$router.push("/Questionnaire");
+    },
+    nextConfirmation() {
+      this.$router.push("/Confirmation");
     }
   }
 }
