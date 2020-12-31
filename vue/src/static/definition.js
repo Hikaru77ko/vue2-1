@@ -3,9 +3,9 @@ const months = [];
 const dates = [];
 
         for(let y = 1967; y < 2000; y++) {
-                const data = new Date(y, 0, 0);
+                const nowDate = new Date(y, 0, 0);
                 const opt = {year:'numeric'};
-                const wareki = data.toLocaleDateString("ja-JP-u-ca-japanese", opt);
+                const wareki = nowDate.toLocaleDateString("ja-JP-u-ca-japanese", opt);
                 years.push(`${y}年　（${wareki}）`)
         }
 
