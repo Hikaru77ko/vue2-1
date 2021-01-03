@@ -32,28 +32,28 @@
 export default {
     computed: {
         getGender() {
-            return this.$store.state.gender;
+            return this.$store.getters.getGender;
         },
         getBirthdayYear() {
-            return this.$store.state.birthday.year;
+            return this.$store.getters.getBirthdayYear;
         },
         getBirthdayMonth() {
-            return this.$store.state.birthday.month;
+            return this.$store.getters.getBirthdayMonth;
         },
         getBirthdayDay() {
-            return this.$store.state.birthday.day;
+            return this.$store.getters.getBirthdayDay;
         },
         getInsuranceAnswer() {
-            return this.$store.state.question.insuranceAnswer;
+            return this.$store.getters.getInsuranceAnswer;
         },
         getHospitalizationAnswer() {
-            return this.$store.state.question.hospitalizationAnswer;
+            return this.$store.getters.getHospitalizationAnswer;
         },
         getSurgeryAnswer() {
-            return this.$store.state.question.surgeryAnswer;
+            return this.$store.getters.getSurgeryAnswer;
         },
         getConsultation() {
-            return this.$store.state.consultation;
+            return this.$store.getters.getConsultation;
         }
     },
     methods: {
