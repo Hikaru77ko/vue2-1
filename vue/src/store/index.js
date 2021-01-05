@@ -16,12 +16,16 @@ export default new Vuex.Store({
       hospitalizationAnswer:"",
       surgeryAnswer:""
       },
-      consultation:""
+    consultation:""
   },
-  mutations: {
+  getters: {
+    getGender: state => state.gender,
+    getBirthdayYear: state => state.birthday.year,
+    getBirthdayMonth: state => state.birthday.month,
+    getBirthdayDay: state => state.birthday.day,
+    getInsuranceAnswer: state => state.question.insuranceAnswer,
+    getHospitalizationAnswer: state => state.question.hospitalizationAnswer,
+    getSurgeryAnswer: state => state.question.surgeryAnswer,
+    getConsultation: state => state.consultation
   },
-  actions: {
-  },
-  modules: {
-  }
 })
